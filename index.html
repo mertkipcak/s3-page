@@ -1,9 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment Explanation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #0077b6;
+        }
+        ul {
+            text-align: left;
+        }
+        button {
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005f86;
+        }
+    </style>
+</head>
 <body>
+    <div class="container">
+        <h1>How This Page is Deployed</h1>
+        <p>This webpage is deployed using AWS S3 and GitHub Actions. Here is how the process works:</p>
+        <ul>
+            <li><strong>Code Repository:</strong> The HTML, CSS, and JavaScript files are stored in a GitHub repository.</li>
+            <li><strong>Automation with GitHub Actions:</strong> Whenever changes are pushed to the repository, GitHub Actions automatically deploys the updates to an S3 bucket.</li>
+            <li><strong>AWS S3 Hosting:</strong> The S3 bucket is configured for static website hosting, which serves the files as a website.</li>
+            <li><strong>Custom Domain:</strong> The domain <code>page.mertkipcak.com</code> is pointed to the S3 bucket to make the page accessible via a custom URL.</li>
+        </ul>
+        <button id="moreInfoButton">Learn More</button>
+    </div>
 
-<h1>My Deployed webpage</h1>
-<p>My first paragraph.</p>
-
+    <script>
+        document.getElementById('moreInfoButton').addEventListener('click', function() {
+            alert('This deployment uses GitHub Actions for CI/CD, AWS S3 for hosting, and Route 53 for DNS configuration. It's an automated, scalable solution for hosting static websites.');
+        });
+    </script>
 </body>
 </html>
