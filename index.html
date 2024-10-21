@@ -54,15 +54,8 @@
             <li><strong>Code Repository:</strong> The HTML, CSS, and JavaScript files are stored in a GitHub repository.</li>
             <li><strong>Automation with GitHub Actions:</strong> Whenever changes are pushed to the repository, GitHub Actions automatically deploys the updates to an S3 bucket.</li>
             <li><strong>AWS S3 Hosting:</strong> The S3 bucket is configured for static website hosting, which serves the files as a website.</li>
-            <li><strong>Custom Domain:</strong> The domain <code>page.mertkipcak.com</code> is pointed to the S3 bucket to make the page accessible via a custom URL.</li>
+            <li><strong>Custom Domain:</strong> The domain <code>page.mertkipcak.com</code> is pointed to the S3 bucket via Squarespace to make the page accessible via a custom URL.</li>
         </ul>
-        <button id="moreInfoButton">Learn More</button>
     </div>
-
-    <script>
-        document.getElementById('moreInfoButton').addEventListener('click', function() {
-            alert('This deployment uses GitHub Actions for CI/CD, AWS S3 for hosting, and Route 53 for DNS configuration. It's an automated, scalable solution for hosting static websites.');
-        });
-    </script>
 </body>
 </html>
